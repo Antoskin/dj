@@ -1,0 +1,315 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  background: url("/img/bg.png") repeat;
+  color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.centered {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+header {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+header .header-item {
+  height: 125px;
+  width: 180px;
+}
+
+header .menu {
+  position: relative;
+}
+
+header .menu i {
+  font-size: 22px;
+  cursor: pointer;
+}
+
+header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+header .logo img {
+  cursor: pointer;
+}
+
+header .socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header .socials div {
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  position: relative;
+}
+
+header .socials div a i {
+  color: #fff;
+}
+
+header .socials div:first-child {
+  margin-right: 9px;
+}
+
+/*test glitch*/
+.glitch-sc, .glitch-insta, .glitch-fb, .glitch-youtube, .glitch-logo, .glitch-menu {
+  font-size: 17px;
+  line-height: 1;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  text-decoration: none;
+  color: #fff;
+}
+
+.glitch-menu {
+  font-size: 22px;
+  line-height: 1;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  text-decoration: none;
+  color: #fff;
+}
+
+.glitch-sc:before, .glitch-sc:after {
+  display: block;
+  font-family: "FontAwesome";
+  content: "\f1be";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: .8;
+}
+
+.glitch-sc:after {
+  color: #e40104;
+  z-index: -2;
+}
+
+.glitch-sc:before {
+  color: #1ed9d3;
+  z-index: -1;
+}
+
+.glitch-insta:before, .glitch-insta:after {
+  display: block;
+  font-family: "FontAwesome";
+  content: "\f16d";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: .8;
+}
+
+.glitch-insta:after {
+  color: #e40104;
+  z-index: -2;
+}
+
+.glitch-insta:before {
+  color: #1ed9d3;
+  z-index: -1;
+}
+
+.glitch-fb:before, .glitch-fb:after {
+  display: block;
+  font-family: "FontAwesome";
+  content: "\f09a";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: .8;
+}
+
+.glitch-fb:after {
+  color: #e40104;
+  z-index: -2;
+}
+
+.glitch-fb:before {
+  color: #1ed9d3;
+  z-index: -1;
+}
+
+.glitch-youtube:before, .glitch-youtube:after {
+  display: block;
+  font-family: "FontAwesome";
+  content: "\f16a";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: .8;
+}
+
+.glitch-youtube:after {
+  color: #e40104;
+  z-index: -2;
+}
+
+.glitch-youtube:before {
+  color: #1ed9d3;
+  z-index: -1;
+}
+
+.glitch-logo:before, .glitch-logo:after {
+  display: block;
+  font-family: "FontAwesome";
+  content: url("/img/logo.png");
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: .8;
+}
+
+.glitch-logo:after {
+  color: #e40104;
+  z-index: -2;
+}
+
+.glitch-logo:before {
+  color: #1ed9d3;
+  z-index: -1;
+}
+
+.glitch-menu:before, .glitch-menu:after {
+  display: block;
+  font-family: "FontAwesome";
+  content: "\f0c9";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: .8;
+}
+
+.glitch-menu:after {
+  color: #e40104;
+  z-index: -2;
+}
+
+.glitch-menu:before {
+  color: #1ed9d3;
+  z-index: -1;
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  to {
+    transform: translate(0);
+  }
+}
+
+.glitch-sc, .glitch-insta, .glitch-fb, .glitch-youtube, .glitch-logo, .glitch-menu {
+  /* previous code */
+}
+
+.glitch-sc:hover:before, .glitch-insta:hover:before, .glitch-fb:hover:before, .glitch-youtube:hover:before, .glitch-logo:hover:before, .glitch-menu:hover:before {
+  animation: glitch 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+}
+
+.glitch-sc:hover:after, .glitch-insta:hover:after, .glitch-fb:hover:after, .glitch-youtube:hover:after, .glitch-logo:hover:after, .glitch-menu:hover:after {
+  animation: glitch 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+}
+
+/*test glitch*/
+ 
+
+ /*# sourceMappingURL= main.css.map */
