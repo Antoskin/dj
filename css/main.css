@@ -17,6 +17,11 @@
   src: url("/font/Montserrat-Black.ttf");
 }
 
+@font-face {
+  font-family: 'Regular';
+  src: url("/font/Montserrat-Regular.ttf");
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -49,6 +54,12 @@ body {
   font-family: 'Light', sans-serif;
 }
 
+h1 {
+  font-family: 'Bold',sans-serif;
+  font-size: 4.4vw;
+  padding-bottom: 25px;
+}
+
 ol, ul {
   list-style: none;
 }
@@ -79,15 +90,16 @@ body {
 }
 
 .centered {
-  max-width: 1280px;
+  max-width: 1170px;
   margin: 0 auto;
+  margin-top: 80px;
 }
 
 header {
   height: 100%;
   display: flex;
   justify-content: space-between;
-  z-index: 99999;
+  z-index: 999;
   position: absolute;
   width: 100%;
   max-width: 1280px;
@@ -159,181 +171,12 @@ header .socials div:first-child {
   font-size: 22px;
   line-height: 1;
   font-weight: 700;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin: 0;
-  text-decoration: none;
-  color: #fff;
 }
 
-.glitch-sc:before, .glitch-sc:after {
-  display: block;
-  font-family: "FontAwesome";
-  content: "\f1be";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  opacity: .8;
+.glitch-sc:hover, .glitch-insta:hover, .glitch-fb:hover, .glitch-youtube:hover, .glitch-menu:hover {
+  animation: glitch 2s steps(100) infinite;
 }
 
-.glitch-sc:after {
-  color: #e40104;
-  z-index: -2;
-}
-
-.glitch-sc:before {
-  color: #1ed9d3;
-  z-index: -1;
-}
-
-.glitch-insta:before, .glitch-insta:after {
-  display: block;
-  font-family: "FontAwesome";
-  content: "\f16d";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  opacity: .8;
-}
-
-.glitch-insta:after {
-  color: #e40104;
-  z-index: -2;
-}
-
-.glitch-insta:before {
-  color: #1ed9d3;
-  z-index: -1;
-}
-
-.glitch-fb:before, .glitch-fb:after {
-  display: block;
-  font-family: "FontAwesome";
-  content: "\f09a";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  opacity: .8;
-}
-
-.glitch-fb:after {
-  color: #e40104;
-  z-index: -2;
-}
-
-.glitch-fb:before {
-  color: #1ed9d3;
-  z-index: -1;
-}
-
-.glitch-youtube:before, .glitch-youtube:after {
-  display: block;
-  font-family: "FontAwesome";
-  content: "\f16a";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  opacity: .8;
-}
-
-.glitch-youtube:after {
-  color: #e40104;
-  z-index: -2;
-}
-
-.glitch-youtube:before {
-  color: #1ed9d3;
-  z-index: -1;
-}
-
-.glitch-logo:before, .glitch-logo:after {
-  display: block;
-  font-family: "FontAwesome";
-  content: url("/img/logo.png");
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  opacity: .8;
-}
-
-.glitch-logo:after {
-  color: #e40104;
-  z-index: -2;
-}
-
-.glitch-logo:before {
-  color: #1ed9d3;
-  z-index: -1;
-}
-
-.glitch-menu:before, .glitch-menu:after {
-  display: block;
-  font-family: "FontAwesome";
-  content: "\f0c9";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  opacity: .8;
-}
-
-.glitch-menu:after {
-  color: #e40104;
-  z-index: -2;
-}
-
-.glitch-menu:before {
-  color: #1ed9d3;
-  z-index: -1;
-}
-
-@keyframes glitch {
-  0% {
-    transform: translate(0);
-  }
-  20% {
-    transform: translate(-2px, 2px);
-  }
-  40% {
-    transform: translate(-2px, -2px);
-  }
-  60% {
-    transform: translate(2px, 2px);
-  }
-  80% {
-    transform: translate(2px, -2px);
-  }
-  to {
-    transform: translate(0);
-  }
-}
-
-.glitch-sc, .glitch-insta, .glitch-fb, .glitch-youtube, .glitch-logo, .glitch-menu {
-  /* previous code */
-}
-
-.glitch-sc:hover:before, .glitch-insta:hover:before, .glitch-fb:hover:before, .glitch-youtube:hover:before, .glitch-logo:hover:before, .glitch-menu:hover:before {
-  animation: glitch 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
-}
-
-.glitch-sc:hover:after, .glitch-insta:hover:after, .glitch-fb:hover:after, .glitch-youtube:hover:after, .glitch-logo:hover:after, .glitch-menu:hover:after {
-  animation: glitch 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
-}
-
-/*test glitch*/
 /*main block 1*/
 .black-wrap {
   background: #070707;
@@ -362,8 +205,47 @@ header .socials div:first-child {
 
 .main-block .title-with-info {
   height: 300px;
-  border: 1px solid tomato;
   position: absolute;
+  width: 60%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 999;
+}
+
+.main-block .title-with-info p {
+  line-height: 32px;
+  font-size: 21px;
+}
+
+.main-block .title-with-info .main-buttons {
+  display: flex;
+  z-index: 9999999;
+}
+
+.main-block .title-with-info .main-buttons button {
+  border: 2px solid #fff;
+  margin: 0;
+  pad: 0;
+  background: transparent;
+  color: #fff;
+  letter-spacing: 1px;
+  font-size: 16px;
+  font-family: 'Regular';
+  width: 200px;
+  line-height: 50px;
+  margin-top: 35px;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.main-block .title-with-info .main-buttons button:hover {
+  background: #fff;
+  color: #000;
+}
+
+.main-block .title-with-info .main-buttons .active {
+  border-right: transparent;
 }
 
 .pre-glitch-img {
@@ -376,16 +258,611 @@ header .socials div:first-child {
 .glitch-img {
   background: url("/img/main.png") no-repeat;
   position: absolute;
-  width: 100%;
+  width: 120%;
   height: 100vh;
   top: 0;
-  left: 0;
   background-position: center;
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
   background-size: cover;
   opacity: 1;
+}
+
+.about {
+  display: flex;
+  padding-top: 80px;
+}
+
+.about .left-side {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about .left-side .about-links {
+  width: 155px;
+  display: flex;
+  flex-direction: column;
+}
+
+.about .left-side .about-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: 'Light', sans-serif;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+}
+
+.about .left-side .about-links a span {
+  padding-bottom: 10px;
+  padding-right: 10px;
+}
+
+.about .left-side .about-links a:first-child i {
+  padding-right: 10px;
+}
+
+.about .left-side .about-links a:nth-child(2) i {
+  padding-right: 13px;
+  padding-left: 4px;
+}
+
+.about .left-side .about-links a:nth-child(3) i {
+  padding-right: 16px;
+  padding-left: 6px;
+}
+
+.about .left-side .about-links a:last-child i {
+  padding-right: 14px;
+  padding-left: 4px;
+}
+
+.about .right-side {
+  width: 50%;
+}
+
+.about .right-side p {
+  font-size: 18px;
+  line-height: 28px;
+  padding-bottom: 20px;
+}
+
+.about .right-side p b {
+  font-family: 'Bold', sans-serif;
+}
+
+/*third block*/
+.my-video {
+  position: relative;
+}
+
+.my-video img {
+  width: 100%;
+}
+
+.my-video .play {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.my-video .play i {
+  color: red;
+  font-size: 100px;
+  cursor: pointer;
+  transition: 0.5s linear;
+}
+
+.my-video .play i:hover {
+  font-size: 110px;
+}
+
+.glitch-sc1:hover, .glitch-insta1:hover, .glitch-fb1:hover, .glitch-youtube1:hover, .glitch-sc:hover {
+  animation: glitch 2s steps(100) infinite;
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 3px 0 0 red, -3px 0 0 #0c33f5;
+    filter: blur(0);
+  }
+  1% {
+    text-shadow: 3px 0 0 red, -3px 0 0 #0c33f5;
+    filter: blur(0);
+  }
+  2% {
+    text-shadow: 3px 0 0 red, -3px 0 0 #0c33f5;
+    filter: blur(0);
+  }
+  3% {
+    text-shadow: 3px 0 0 red, -3px 0 0 #0c33f5;
+    filter: blur(0);
+  }
+  4% {
+    text-shadow: 3px 0 0 red, -3px 0 0 #0c33f5;
+    filter: blur(0);
+  }
+  5% {
+    text-shadow: -3px 0 0 red, 3px 0 0 #0c33f5;
+    filter: blur(0);
+  }
+  6% {
+    text-shadow: -3px 0 0 red, 3px 0 0 #0c33f5;
+    filter: blur(0);
+  }
+  7% {
+    text-shadow: -3px 0 0 red, 3px 0 0 #0c33f5;
+    filter: blur(0);
+  }
+  8% {
+    text-shadow: -3px 0 0 red, 3px 0 0 #0c33f5;
+    filter: blur(0);
+  }
+  9% {
+    text-shadow: -3px 0 0 red, 3px 0 0 #0c33f5;
+    filter: blur(0);
+  }
+  10% {
+    text-shadow: -3px 0 0 red, 3px 0 0 #0c33f5;
+    filter: blur(0);
+  }
+  11% {
+    text-shadow: 1px 0 0 red, -1px 0 0 #1ed9d3;
+    filter: blur(0.5px);
+  }
+  12% {
+    text-shadow: 1px 0 0 red, -1px 0 0 #1ed9d3;
+    filter: blur(0.5px);
+  }
+  13% {
+    text-shadow: 1px 0 0 red, -1px 0 0 #1ed9d3;
+    filter: blur(0.5px);
+  }
+  14% {
+    text-shadow: 1px 0 0 red, -1px 0 0 #1ed9d3;
+    filter: blur(0);
+  }
+  15% {
+    text-shadow: 1px 0 0 red, -1px 0 0 #1ed9d3;
+    filter: blur(0);
+  }
+  16% {
+    text-shadow: -3px 0 0 red, 3px 0 0 #1ed9d3;
+    filter: blur(0);
+  }
+  17% {
+    text-shadow: -3px 0 0 red, 3px 0 0 #1ed9d3;
+    filter: blur(0);
+  }
+  18% {
+    text-shadow: -3px 0 0 red, 3px 0 0 #1ed9d3;
+    filter: blur(0);
+  }
+  19% {
+    text-shadow: -3px 0 0 red, 3px 0 0 #1ed9d3;
+    filter: blur(0);
+  }
+  20% {
+    text-shadow: -3px 0 0 red, 3px 0 0 #1ed9d3;
+    filter: blur(0);
+  }
+  21% {
+    text-shadow: 0.8px 0 0 #0c33f5, -0.8px 0 0 #1ed9d3;
+    filter: blur(0);
+  }
+  22% {
+    text-shadow: 0.8px 0 0 #0c33f5, -0.8px 0 0 #1ed9d3;
+    filter: blur(0);
+  }
+  23% {
+    text-shadow: 0.8px 0 0 #0c33f5, -0.8px 0 0 #1ed9d3;
+    filter: blur(0);
+  }
+  24% {
+    text-shadow: 0.8px 0 0 #0c33f5, -0.8px 0 0 #1ed9d3;
+    filter: blur(0);
+  }
+  25% {
+    text-shadow: 0.8px 0 0 #0c33f5, -0.8px 0 0 #1ed9d3;
+    filter: blur(0);
+  }
+  26% {
+    text-shadow: 0.8px 0 0 #0c33f5, -0.8px 0 0 #1ed9d3;
+    filter: blur(0.5px);
+  }
+  27% {
+    text-shadow: 0.8px 0 0 #0c33f5, -0.8px 0 0 #1ed9d3;
+    filter: blur(0.5px);
+  }
+  28% {
+    text-shadow: 0.8px 0 0 #0c33f5, -0.8px 0 0 #1ed9d3;
+    filter: blur(0);
+  }
+  29% {
+    text-shadow: 0.8px 0 0 #0c33f5, -0.8px 0 0 #1ed9d3;
+    filter: blur(0);
+  }
+  30% {
+    text-shadow: 0.8px 0 0 #0c33f5, -0.8px 0 0 #1ed9d3;
+    filter: blur(0);
+  }
+  31% {
+    text-shadow: -3px 0 0 #0c33f5, 3px 0 0 #1ed9d3;
+    filter: blur(0);
+  }
+  32% {
+    text-shadow: -3px 0 0 #0c33f5, 3px 0 0 #1ed9d3;
+    filter: blur(0);
+  }
+  33% {
+    text-shadow: -3px 0 0 #0c33f5, 3px 0 0 #1ed9d3;
+    filter: blur(0);
+  }
+  34% {
+    text-shadow: -3px 0 0 #0c33f5, 3px 0 0 #1ed9d3;
+    filter: blur(0);
+  }
+  35% {
+    text-shadow: -3px 0 0 #0c33f5, 3px 0 0 #1ed9d3;
+    filter: blur(0.5px);
+  }
+  36% {
+    text-shadow: -3px 0 0 #0c33f5, 3px 0 0 #1ed9d3;
+    filter: blur(0.5px);
+  }
+  37% {
+    text-shadow: -3px 0 0 #0c33f5, 3px 0 0 #1ed9d3;
+    filter: blur(0.5px);
+  }
+  38% {
+    text-shadow: -3px 0 0 #0c33f5, 3px 0 0 #1ed9d3;
+    filter: blur(0);
+  }
+  39% {
+    text-shadow: -3px 0 0 #0c33f5, 3px 0 0 #1ed9d3;
+    filter: blur(0);
+  }
+  40% {
+    text-shadow: -3px 0 0 #0c33f5, 3px 0 0 #1ed9d3;
+    filter: blur(0);
+  }
+  41% {
+    text-shadow: 45px 0 0 #0c33f5, -45px 0 0 #1ed9d3;
+    filter: blur(0);
+  }
+  42% {
+    text-shadow: 0 0 0 #0c33f5, 0 0 0 #1ed9d3;
+    filter: blur(0);
+  }
+  43% {
+    text-shadow: 1px 0 0 red, -1px 0 0 #1ed9d3;
+    filter: blur(0);
+  }
+  44% {
+    text-shadow: 1px 0 0 red, -1px 0 0 #1ed9d3;
+    filter: blur(0);
+  }
+  45% {
+    text-shadow: 1px 0 0 red, -1px 0 0 #1ed9d3;
+    filter: blur(0);
+  }
+  46% {
+    text-shadow: 1px 0 0 red, -1px 0 0 #1ed9d3;
+    filter: blur(0.5px);
+  }
+  47% {
+    text-shadow: -3px 0 0 red, 3px 0 0 #1ed9d3;
+    filter: blur(0.5px);
+  }
+  48% {
+    text-shadow: -3px 0 0 red, 3px 0 0 #1ed9d3;
+    filter: blur(0);
+  }
+  49% {
+    text-shadow: -3px 0 0 red, 3px 0 0 #1ed9d3;
+    filter: blur(0);
+  }
+  50% {
+    text-shadow: -3px 0 0 red, 3px 0 0 #1ed9d3;
+    filter: blur(0);
+  }
+  51% {
+    text-shadow: 3px 0 0 red, -3px 0 0 #0c33f5;
+    filter: blur(0);
+  }
+  52% {
+    text-shadow: 3px 0 0 red, -3px 0 0 #0c33f5;
+    filter: blur(0);
+  }
+  53% {
+    text-shadow: 3px 0 0 red, -3px 0 0 #0c33f5;
+    filter: blur(0);
+  }
+  54% {
+    text-shadow: 3px 0 0 red, -3px 0 0 #0c33f5;
+    filter: blur(0);
+  }
+  55% {
+    text-shadow: 3px 0 0 red, -3px 0 0 #0c33f5;
+    filter: blur(0.5px);
+  }
+  56% {
+    text-shadow: -3px 0 0 red, 3px 0 0 #0c33f5;
+    filter: blur(0.5px);
+  }
+  57% {
+    text-shadow: -3px 0 0 red, 3px 0 0 #0c33f5;
+    filter: blur(0.5px);
+  }
+  58% {
+    text-shadow: -3px 0 0 red, 3px 0 0 #0c33f5;
+    filter: blur(0);
+  }
+  59% {
+    text-shadow: -3px 0 0 red, 3px 0 0 #0c33f5;
+    filter: blur(0);
+  }
+  60% {
+    text-shadow: -3px 0 0 red, 3px 0 0 #0c33f5;
+    filter: blur(0);
+  }
+  61% {
+    text-shadow: 30px 0 0 red, -30px 0 0 #1ed9d3;
+    filter: blur(0);
+  }
+  62% {
+    text-shadow: 0 0 0 red, 0 0 0 #1ed9d3;
+    filter: blur(0);
+  }
+  63% {
+    text-shadow: 1px 0 0 red, -1px 0 0 #0c33f5;
+    filter: blur(0);
+  }
+  64% {
+    text-shadow: 1px 0 0 red, -1px 0 0 #0c33f5;
+    filter: blur(0);
+  }
+  65% {
+    text-shadow: 1px 0 0 red, -1px 0 0 #0c33f5;
+    filter: blur(0);
+  }
+  66% {
+    text-shadow: 1px 0 0 red, -1px 0 0 #0c33f5;
+    filter: blur(0.5px);
+  }
+  67% {
+    text-shadow: -3px 0 0 red, 3px 0 0 #0c33f5;
+    filter: blur(0.5px);
+  }
+  68% {
+    text-shadow: -3px 0 0 red, 3px 0 0 #0c33f5;
+    filter: blur(0);
+  }
+  69% {
+    text-shadow: -3px 0 0 red, 3px 0 0 #0c33f5;
+    filter: blur(0);
+  }
+  70% {
+    text-shadow: -3px 0 0 red, 3px 0 0 #0c33f5;
+    filter: blur(0);
+  }
+  71% {
+    text-shadow: 50px 0 0 red, -50px 0 0 #0c33f5;
+    filter: blur(0);
+  }
+  72% {
+    text-shadow: 0 0 0 red, 0 0 0 #0c33f5;
+    filter: blur(0);
+  }
+  73% {
+    text-shadow: 3px 0 0 red, -3px 0 0 #0c33f5;
+    filter: blur(0);
+  }
+  74% {
+    text-shadow: 3px 0 0 red, -3px 0 0 #0c33f5;
+    filter: blur(0);
+  }
+  75% {
+    text-shadow: 3px 0 0 red, -3px 0 0 #0c33f5;
+    filter: blur(0);
+  }
+  76% {
+    text-shadow: 3px 0 0 red, -3px 0 0 #0c33f5;
+    filter: blur(0);
+  }
+  77% {
+    text-shadow: -3px 0 0 red, 3px 0 0 #0c33f5;
+    filter: blur(0);
+  }
+  78% {
+    text-shadow: -3px 0 0 red, 3px 0 0 #0c33f5;
+    filter: blur(0);
+  }
+  79% {
+    text-shadow: -3px 0 0 red, 3px 0 0 #0c33f5;
+    filter: blur(0);
+  }
+  80% {
+    text-shadow: -3px 0 0 red, 3px 0 0 #0c33f5;
+    filter: blur(0);
+  }
+  81% {
+    text-shadow: 1px 0 0 red, -1px 0 0 #1ed9d3;
+    filter: blur(0);
+  }
+  82% {
+    text-shadow: 1px 0 0 red, -1px 0 0 #1ed9d3;
+    filter: blur(0);
+  }
+  83% {
+    text-shadow: 1px 0 0 red, -1px 0 0 #1ed9d3;
+    filter: blur(0.5px);
+  }
+  84% {
+    text-shadow: 1px 0 0 red, -1px 0 0 #1ed9d3;
+    filter: blur(0.5px);
+  }
+  85% {
+    text-shadow: 1px 0 0 red, -1px 0 0 #1ed9d3;
+    filter: blur(0.5px);
+  }
+  86% {
+    text-shadow: -3px 0 0 red, 3px 0 0 #1ed9d3;
+    filter: blur(0.5px);
+  }
+  87% {
+    text-shadow: -3px 0 0 red, 3px 0 0 #1ed9d3;
+    filter: blur(0.5px);
+  }
+  88% {
+    text-shadow: -3px 0 0 red, 3px 0 0 #1ed9d3;
+    filter: blur(0);
+  }
+  89% {
+    text-shadow: -3px 0 0 red, 3px 0 0 #1ed9d3;
+    filter: blur(0);
+  }
+  90% {
+    text-shadow: -3px 0 0 red, 3px 0 0 #1ed9d3;
+    filter: blur(0);
+  }
+  91% {
+    text-shadow: 60px 0 0 #1ed9d3, -60px 0 0 #0c33f5;
+    filter: blur(0);
+  }
+  92% {
+    text-shadow: 0 0 0 #1ed9d3, 0 0 0 #0c33f5;
+    filter: blur(0);
+  }
+  92% {
+    text-shadow: 0.8px 0 0 #0c33f5, -0.8px 0 0 #1ed9d3;
+    filter: blur(0);
+  }
+  93% {
+    text-shadow: 0.8px 0 0 #0c33f5, -0.8px 0 0 #1ed9d3;
+    filter: blur(0);
+  }
+  94% {
+    text-shadow: 0.8px 0 0 #0c33f5, -0.8px 0 0 #1ed9d3;
+    filter: blur(0);
+  }
+  95% {
+    text-shadow: 0.8px 0 0 #0c33f5, -0.8px 0 0 #1ed9d3;
+    filter: blur(0);
+  }
+  96% {
+    text-shadow: -3px 0 0 #0c33f5, 3px 0 0 #1ed9d3;
+    filter: blur(0);
+  }
+  97% {
+    text-shadow: -3px 0 0 #0c33f5, 3px 0 0 #1ed9d3;
+    filter: blur(0);
+  }
+  98% {
+    text-shadow: -3px 0 0 #0c33f5, 3px 0 0 #1ed9d3;
+    filter: blur(0);
+  }
+  99% {
+    text-shadow: -3px 0 0 #0c33f5, 3px 0 0 #1ed9d3;
+    filter: blur(0);
+  }
+  100% {
+    text-shadow: -3px 0 0 #0c33f5, 3px 0 0 #1ed9d3;
+    filter: blur(0);
+  }
+}
+
+/*four bloc gallery*/
+.gallery {
+  position: relative;
+  min-height: 700px;
+}
+
+.gallery .genes {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: url("/img/line.png") no-repeat;
+  height: 280px;
+  z-index: -1;
+}
+
+.gallery .photo-gal {
+  position: absolute;
+  text-align: center;
+  z-index: 9999;
+  left: 0;
+  right: 0;
+  margin: auto;
+  margin-top: 80px;
+}
+
+.gallery .photo-gal h4 {
+  font-size: 24px;
+  line-height: 58px;
+  letter-spacing: 1px;
+  font-family: 'Black', sans-serif;
+}
+
+.gallery .photo-gal .area-with-foto {
+  overflow: hidden;
+  border: 1px solid red;
+}
+
+.gallery .photo-gal .area-with-foto .photo-item {
+  float: left;
+  border: 1px solid red;
+  width: 33.33%;
+  display: flex;
+  justify-content: center;
+}
+
+.gallery .photo-gal .area-with-foto .photo-item .item {
+  height: 230px;
+  width: 370px;
+  border: 1px solid green;
+  background: #000;
+}
+
+.gallery .photo-gal .w-me {
+  border: 2px solid #fff;
+  color: #000;
+  cursor: pointer;
+  margin-top: 50px;
+  background: #fff;
+  transition: 0.3s linear;
+  font-family: 'Regular';
+  font-size: 16px;
+  line-height: 33px;
+  padding: 0 27px;
+}
+
+.gallery .photo-gal .w-me:hover {
+  background: transparent;
+  color: #fff;
+}
+
+@media (max-width: 1144px) {
+  .gallery .photo-gal .area-with-foto .photo-item {
+    float: inherit;
+    margin: 0 auto;
+  }
 }
  
 

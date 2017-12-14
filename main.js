@@ -1,5 +1,9 @@
 $( document).ready( () => {
     console.log('!');
+    // $('.main-buttons button').click(function() {
+    //     $('.main-buttons button').removeClass('active');
+    //     $(this).addClass('active');
+    // })
 });
 
 $( function() {
@@ -22,5 +26,25 @@ $( function() {
       glitch2TimeMin : 0, 
       // set max time for glitch 2 elem
       glitch2TimeMax : 200, 
+    });
+    $('.genes').mgGlitch({
+        // set 'true' to stop the plugin
+        destroy : false, 
+        // set 'false' to stop glitching
+        glitch: true, 
+        // set 'false' to stop scaling
+        scale: false, 
+        // set 'false' to stop glitch blending
+        blend : true, 
+        // select blend mode type
+        blendModeType : 'hue',
+        // set min time for glitch 1 elem
+        glitch1TimeMin : 300, 
+        // set max time for glitch 1 elem
+        glitch1TimeMax : 100,
+        // set min time for glitch 2 elem
+        glitch2TimeMin : 300, 
+        // set max time for glitch 2 elem
+        glitch2TimeMax : 300, 
     });
 });
