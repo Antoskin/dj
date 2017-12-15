@@ -60,6 +60,33 @@ h1 {
   padding-bottom: 25px;
 }
 
+h4 {
+  font-size: 24px;
+  line-height: 58px;
+  letter-spacing: 1px;
+  font-family: 'Black', sans-serif;
+}
+
+button {
+  border: 2px solid #fff;
+  margin: 0;
+  pad: 0;
+  background: transparent;
+  color: #fff;
+  letter-spacing: 1px;
+  font-size: 16px;
+  font-family: 'Regular';
+  width: 200px;
+  line-height: 50px;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+button:hover {
+  background: #fff;
+  color: #000;
+}
+
 ol, ul {
   list-style: none;
 }
@@ -92,7 +119,7 @@ body {
 .centered {
   max-width: 1170px;
   margin: 0 auto;
-  margin-top: 80px;
+  margin-bottom: 80px;
 }
 
 header {
@@ -216,32 +243,12 @@ header .socials div:first-child {
 .main-block .title-with-info p {
   line-height: 32px;
   font-size: 21px;
+  padding-bottom: 30px;
 }
 
 .main-block .title-with-info .main-buttons {
   display: flex;
   z-index: 9999999;
-}
-
-.main-block .title-with-info .main-buttons button {
-  border: 2px solid #fff;
-  margin: 0;
-  pad: 0;
-  background: transparent;
-  color: #fff;
-  letter-spacing: 1px;
-  font-size: 16px;
-  font-family: 'Regular';
-  width: 200px;
-  line-height: 50px;
-  margin-top: 35px;
-  cursor: pointer;
-  transition: 0.4s ease;
-}
-
-.main-block .title-with-info .main-buttons button:hover {
-  background: #fff;
-  color: #000;
 }
 
 .main-block .title-with-info .main-buttons .active {
@@ -363,7 +370,7 @@ header .socials div:first-child {
   color: red;
   font-size: 100px;
   cursor: pointer;
-  transition: 0.5s linear;
+  transition: 0.2s ease;
 }
 
 .my-video .play i:hover {
@@ -800,11 +807,10 @@ header .socials div:first-child {
   margin: auto;
   background: url("/img/line.png") no-repeat;
   height: 280px;
-  z-index: -1;
+  z-index: -1 !important;
 }
 
 .gallery .photo-gal {
-  position: absolute;
   text-align: center;
   z-index: 9999;
   left: 0;
@@ -813,21 +819,13 @@ header .socials div:first-child {
   margin-top: 80px;
 }
 
-.gallery .photo-gal h4 {
-  font-size: 24px;
-  line-height: 58px;
-  letter-spacing: 1px;
-  font-family: 'Black', sans-serif;
-}
-
 .gallery .photo-gal .area-with-foto {
   overflow: hidden;
-  border: 1px solid red;
+  margin-top: 80px;
 }
 
 .gallery .photo-gal .area-with-foto .photo-item {
   float: left;
-  border: 1px solid red;
   width: 33.33%;
   display: flex;
   justify-content: center;
@@ -836,8 +834,8 @@ header .socials div:first-child {
 .gallery .photo-gal .area-with-foto .photo-item .item {
   height: 230px;
   width: 370px;
-  border: 1px solid green;
-  background: #000;
+  border: 1px solid rgba(0, 128, 0, 0.527);
+  background: rgba(0, 0, 0, 0.603);
 }
 
 .gallery .photo-gal .w-me {
@@ -856,6 +854,148 @@ header .socials div:first-child {
 .gallery .photo-gal .w-me:hover {
   background: transparent;
   color: #fff;
+}
+
+.gigers {
+  text-align: center;
+  position: relative;
+}
+
+.gigers .red-imager {
+  height: 1220px;
+  position: absolute;
+  left: -150px;
+  right: 150px;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.gigers .red-img {
+  height: 1220px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: url("/img/red.png") no-repeat;
+  width: 100%;
+}
+
+.gigers .gigs .play-photo {
+  height: 525px;
+  position: relative;
+}
+
+.gigers .gigs .play-photo .playlist {
+  width: 50%;
+  height: 100%;
+  float: left;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.gigers .gigs .play-photo .playlist .pl {
+  width: 90%;
+  height: 75px;
+  background: url("/img/play.png") no-repeat;
+  background-position: center;
+}
+
+.gigers .gigs .play-photo .photo {
+  width: 50%;
+  height: 100%;
+  float: left;
+  z-index: 99;
+}
+
+.gigers .gigs .play-photo .photo .pto {
+  text-align: left;
+}
+
+.tour {
+  padding: 0 20px;
+  text-align: center;
+  z-index: 99;
+}
+
+.tour .list-of-tour {
+  height: 100%;
+}
+
+.tour .list-of-tour .list-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.253);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+
+.tour .list-of-tour .list-item .grupper {
+  display: flex;
+  justify-content: space-between;
+  min-width: 300px;
+  position: relative;
+}
+
+.tour .list-of-tour .list-item .grupper div {
+  line-height: 50px;
+  font-family: 'Regular', sans-serif;
+  font-size: 15px;
+}
+
+.tour .list-of-tour .list-item .grupper .location {
+  width: 100px;
+  position: relative;
+}
+
+.tour .list-of-tour .list-item .grupper .location article {
+  position: absolute;
+  width: 200px;
+  text-align: left;
+}
+
+.tour .list-of-tour .list-item .city {
+  line-height: 50px;
+  font-size: 15px;
+}
+
+.tour .list-of-tour .list-item button {
+  font-size: 13px;
+  line-height: 44px;
+  widows: 180px;
+}
+
+.play-two {
+  height: 404px !important;
+}
+
+.photo-two {
+  position: relative;
+}
+
+.photo-two .pto {
+  position: relative;
+  height: 100%;
+}
+
+.photo-two .pto .proto {
+  background: url("/img/bot.jpg") !important;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+/*footer*/
+footer {
+  height: 290px;
+  background: #070707;
+  border: 1px solid red;
+  text-align: center;
 }
 
 @media (max-width: 1144px) {

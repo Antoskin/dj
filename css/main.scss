@@ -47,12 +47,39 @@ footer, header, hgroup, main, menu, nav, section {
 body {
     line-height: 1;
     font-family: 'Light', sans-serif;
+    // height: 30000px;
 }
 h1 {
     font-family: 'Bold',sans-serif;
     // font-size: 72px;
     font-size: 4.4vw;
     padding-bottom: 25px;
+}
+h4 {
+    font-size: 24px;
+    line-height: 58px;
+    letter-spacing: 1px;
+    font-family: 'Black', sans-serif;
+}
+button {
+    border: 2px solid #fff;
+    margin: 0;
+    pad: 0;
+    background: transparent;
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-family: 'Regular';
+    width: 200px;
+    
+    line-height: 50px;
+    // margin-top: 35px;
+    cursor: pointer;
+    transition: 0.4s ease;
+    &:hover {
+        background: #fff;
+        color: #000;
+    }
 }
 ol, ul {
 	list-style: none;
@@ -85,7 +112,8 @@ body {
 .centered {
     max-width: 1170px;
     margin: 0 auto;
-    margin-top: 80px;
+   
+    margin-bottom: 80px;
     //border: 1px solid #fff;
 }
 
@@ -101,7 +129,7 @@ header {
     left: 0;
     right: 0;
     .header-item {
-        //border: 1px solid #fff;
+       
         height: 125px;
         width: 180px;
     }
@@ -205,31 +233,32 @@ header {
        p {
            line-height: 32px;
            font-size: 21px;
+           padding-bottom: 30px;
            
        }
        .main-buttons {
            display: flex;
            z-index: 9999999;
-            button {
-                border: 2px solid #fff;
-                margin: 0;
-                pad: 0;
-                background: transparent;
-                color: #fff;
-                letter-spacing: 1px;
-                font-size: 16px;
-                font-family: 'Regular';
-                width: 200px;
+            // button {
+            //     border: 2px solid #fff;
+            //     margin: 0;
+            //     pad: 0;
+            //     background: transparent;
+            //     color: #fff;
+            //     letter-spacing: 1px;
+            //     font-size: 16px;
+            //     font-family: 'Regular';
+            //     width: 200px;
                 
-                line-height: 50px;
-                margin-top: 35px;
-                cursor: pointer;
-                transition: 0.4s ease;
-                &:hover {
-                    background: #fff;
-                    color: #000;
-                }
-            }
+            //     line-height: 50px;
+            //     margin-top: 35px;
+            //     cursor: pointer;
+            //     transition: 0.4s ease;
+            //     &:hover {
+            //         background: #fff;
+            //         color: #000;
+            //     }
+            // }
             .active {
                 border-right: transparent
             }
@@ -345,7 +374,7 @@ header {
             color: red;
             font-size: 100px;
             cursor: pointer;
-            transition: 0.5s linear;
+            transition: 0.2s ease;
             &:hover {
                 font-size: 110px;
             }
@@ -481,17 +510,12 @@ header {
         margin: auto;
         background: url('/img/line.png') no-repeat;
         height: 280px;
-        z-index: -1;
+        z-index: -1 !important;
        // border: 1px solid tomato;
     }
     .photo-gal {
-        h4 {
-            font-size: 24px;
-            line-height: 58px;
-            letter-spacing: 1px;
-            font-family: 'Black', sans-serif;
-        }
-        position: absolute;
+
+        // position: absolute;
         text-align: center;
         z-index: 9999;
         left: 0;
@@ -501,10 +525,11 @@ header {
         .area-with-foto {
             //border: 1px solid red;
             overflow: hidden;
-            border: 1px solid red;
+            //border: 1px solid red;
+            margin-top: 80px;
             .photo-item {
                 float: left;
-                border: 1px solid red;
+                //border: 1px solid red;
                 width: 33.33%;
                 display: flex;
                 justify-content: center;
@@ -512,8 +537,8 @@ header {
                 .item {
                     height: 230px;
                     width: 370px;
-                    border: 1px solid green;
-                    background: #000;
+                    border: 1px solid rgba(0, 128, 0, 0.527);
+                    background: rgba(0, 0, 0, 0.603);
                 }
             }
             
@@ -535,6 +560,152 @@ header {
             }
         }
     }
+}
+
+.gigers {
+    //border: 1px solid red;
+    text-align: center;
+    position: relative;
+    .red-imager {
+        //border: 1px solid red;
+        height: 1220px;
+        position: absolute;
+        left: -150px;
+        right: 150px;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: -1;
+    }
+    .red-img {
+        height: 1220px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        //border: 1px solid green;
+        background: url('/img/red.png') no-repeat;
+        // background-size: contain;
+        width: 100%;
+      
+    }
+    .gigs {
+        //border: 1px solid tomato;
+        .play-photo {
+            //border: 1px solid tomato;
+            height: 525px;
+            position: relative;
+            .playlist {
+                //border: 1px solid green;
+                width: 50%;
+                height: 100%;
+                float: left;
+                z-index: 99;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-end;
+                .pl {
+                    width: 90%;
+                    height: 75px;
+                    // background: rgba(129, 129, 129, 0.205);
+                    background: url('/img/play.png') no-repeat;
+                    background-position: center;
+                    //border:   1px solid rgba(255, 99, 71, 0.363);
+                }
+            }
+            .photo {
+                //border: 1px solid rgb(230, 197, 13);
+                width: 50%;
+                height: 100%;
+                float: left;
+                z-index: 99;
+                .pto {
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
+
+
+.tour {
+    padding: 0 20px;
+    text-align: center;
+    z-index: 99;
+    .list-of-tour {
+        //border: 1px solid tomato;
+        height: 100%;
+        .list-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.253);
+            display: flex;
+            justify-content: space-between;
+            padding: 0 2px;
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+            .grupper {
+                display: flex;
+                // /border: 1px solid red;
+                justify-content: space-between;
+                min-width: 300px;
+                position: relative;
+                div {
+                    line-height: 50px;
+                    font-family: 'Regular', sans-serif;
+                    font-size: 15px;
+                }
+                .location {
+                    //border: 1px solid green;
+                    width: 100px;
+                    position: relative;
+                    article {
+                        //border: 1px solid tomato;
+                        position: absolute;
+                        width: 200px;
+                        text-align: left;
+                    }
+                }
+            }
+            .city {
+                line-height: 50px;
+                font-size: 15px;
+            }
+            button {
+                font-size: 13px;
+                line-height: 44px;
+                widows: 180px;
+            }
+        }
+    }
+}
+
+.play-two {
+    height: 404px !important;
+}
+.photo-two {
+    position: relative;
+    .pto {
+        position: relative;
+        height: 100%;
+        .proto {
+            background: url('/img/bot.jpg') !important;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            //border: 1px solid greenyellow;
+        }
+    }
+}
+
+
+
+/*footer*/
+
+footer {
+    height: 290px;
+    background: #070707;
+    border: 1px solid red;
+    text-align: center;
 }
 
 

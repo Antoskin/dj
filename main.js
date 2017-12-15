@@ -47,4 +47,26 @@ $( function() {
         // set max time for glitch 2 elem
         glitch2TimeMax : 300, 
     });
+    $('.red-img').mgGlitch({
+        destroy : false, 
+        glitch: true, 
+        scale: false, 
+        blend : true, 
+        blendModeType : 'hue',
+        glitch1TimeMin : 300, 
+        glitch1TimeMax : 100,
+        glitch2TimeMin : 300, 
+        glitch2TimeMax : 300, 
+    });
+    $('.proto').mgGlitch({
+        destroy : false, 
+        glitch: true, 
+        scale: false, 
+        blend : true, 
+        blendModeType : 'hue',
+        glitch1TimeMin : 300, 
+        glitch1TimeMax : 100,
+        glitch2TimeMin : 300, 
+        glitch2TimeMax : 300, 
+    });
 });
