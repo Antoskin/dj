@@ -114,6 +114,7 @@ body {
 
 * {
   box-sizing: border-box;
+  outline: none;
 }
 
 .centered {
@@ -141,6 +142,8 @@ header .header-item {
 
 header .menu {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 header .menu i {
@@ -181,7 +184,7 @@ header .socials div:first-child {
 }
 
 /*test glitch*/
-.glitch-sc, .glitch-insta, .glitch-fb, .glitch-youtube, .glitch-logo, .glitch-menu {
+.glitch-sc, .glitch-insta, .glitch-fb, .glitch-youtube, .glitch-logo {
   font-size: 17px;
   line-height: 1;
   font-weight: 700;
@@ -219,7 +222,7 @@ header .socials div:first-child {
   top: 0;
   background: url("/img/pol.png");
   background-position: center;
-  height: 100vh;
+  height: 0;
 }
 
 .main-block {
@@ -1003,6 +1006,20 @@ footer {
     float: inherit;
     margin: 0 auto;
   }
+}
+
+.bur {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid tomato; */
+  line-height: 6px;
+  font-size: 33px;
+  font-weight: 100;
+  cursor: pointer;
+}
+
+.leh {
+  color: #fff;
 }
  
 

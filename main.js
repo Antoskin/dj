@@ -1,10 +1,30 @@
+
 $( document).ready( () => {
     console.log('!');
     // $('.main-buttons button').click(function() {
     //     $('.main-buttons button').removeClass('active');
     //     $(this).addClass('active');
     // })
+
 });
+
+
+
+$(window).on('load', function() {
+    // console.log('!')
+    $('#preloader-wrapper').fadeOut('slow');
+    let start_count = 0;
+    let iner = setInterval( () => {
+        console.log(start_count);
+        $('.wrapper-polos').css({'height':start_count+'vh'})
+        start_count++;
+        { start_count == 101 ? clearInterval(iner) : `` }
+    },30 );
+})
+
+
+
+
 
 $( function() {
     $( ".glitch-img" ).mgGlitch({
