@@ -1018,6 +1018,24 @@ footer {
   cursor: pointer;
 }
 
+.lesk .leh {
+  transition: 0.3s ease;
+}
+
+.lesk .leh:first-child {
+  transform: rotate(45deg);
+  transform-origin: 7px;
+}
+
+.lesk .leh:nth-child(2) {
+  opacity: 0;
+}
+
+.lesk .leh:last-child {
+  transform: rotate(-45deg);
+  transform-origin: -1px;
+}
+
 .leh {
   color: #fff;
 }

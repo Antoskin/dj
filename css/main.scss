@@ -729,6 +729,22 @@ footer {
     font-weight: 100;
     cursor: pointer;
 }
+.lesk {
+    .leh {
+        transition: 0.3s ease;
+        &:first-child {
+            transform: rotate(45deg);
+            transform-origin: 7px;
+        }
+        &:nth-child(2) {
+            opacity: 0;
+        }
+        &:last-child {
+            transform: rotate(-45deg);
+            transform-origin: -1px;
+        }
+    }
+}
 .leh {
    
     color: #fff;

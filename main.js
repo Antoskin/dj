@@ -1,10 +1,17 @@
 
 $( document).ready( () => {
-    console.log('!');
+    // console.log('!');
     // $('.main-buttons button').click(function() {
     //     $('.main-buttons button').removeClass('active');
     //     $(this).addClass('active');
     // })
+
+
+   
+        $('.bur').click( function() {
+            $(this).toggleClass('lesk');
+        });
+  
 
 });
 
